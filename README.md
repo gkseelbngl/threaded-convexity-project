@@ -76,7 +76,7 @@ Uygulama açıldığında karşınıza iki bölmeli modern bir arayüz gelecekti
 
 ### B. Rastgele Nokta ile Performans Testi
 
-1. Sağ üst köşedeki kutucuğa üretilmesini istediğiniz nokta sayısını yazın (Örn: 1,000,000).
+1. Sağ üst köşedeki kutucuğa üretilmesini istediğiniz nokta sayısını yazın (Örn: 10,000,000).
 
 2. "Rastgele Nokta Yerleştir" butonuna tıklayın.
 
