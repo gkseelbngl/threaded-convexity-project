@@ -62,31 +62,31 @@ Uygulama açıldığında karşınıza iki bölmeli modern bir arayüz gelecekti
 
 ### A. Manuel Çizim Modu
 
-Sol taraftaki beyaz alan (Canvas) üzerine fareyle tıklayarak noktalarınızı yerleştirin.
+1. Sol taraftaki beyaz alan (Canvas) üzerine fareyle tıklayarak noktalarınızı yerleştirin.
 
-Noktaları yerleştirirken çizgiler siyah kalacaktır. İstediğiniz şekli çizdikten sonra alttaki "Manuel Çizimi Bitir ve Analiz Et" butonuna basın.
+2. Noktaları yerleştirirken çizgiler siyah kalacaktır. İstediğiniz şekli çizdikten sonra alttaki "Manuel Çizimi Bitir ve Analiz Et" butonuna basın.
 
-Eğer nokta sayısı 3'ten az ise sistem uyarı verecektir. Nokta sayısı yeterli ise poligon otomatik olarak ilk noktaya bağlanıp kapanacaktır:
+3. Eğer nokta sayısı 3'ten az ise sistem uyarı verecektir. Nokta sayısı yeterli ise poligon otomatik olarak ilk noktaya bağlanıp kapanacaktır:
 
-Poligon Convex (Dış Bükey) ise çizgiler YEŞİL olur.
+  - *Poligon Convex (Dış Bükey)* ise çizgiler **YEŞİL** olur.
 
-Poligon Concave (İç Bükey) ise çizgiler KIRMIZI olur.
+  - *Poligon Concave (İç Bükey)* ise çizgiler **KIRMIZI** olur.
 
-Yanlış koyduğunuz noktaları "Son Noktayı Geri Al" butonuyla silebilir, "Ekranı Temizle" butonuyla çiziminizi tamamen sıfırlayabilirsiniz.
+4. Yanlış koyduğunuz noktaları "**Son Noktayı Geri Al**" butonuyla silebilir, "**Ekranı Temizle**" butonuyla çiziminizi tamamen sıfırlayabilirsiniz.
 
 ### B. Rastgele Nokta ile Performans Testi
 
-Sağ üst köşedeki kutucuğa üretilmesini istediğiniz nokta sayısını yazın (Örn: 1,000,000).
+1. Sağ üst köşedeki kutucuğa üretilmesini istediğiniz nokta sayısını yazın (Örn: 1,000,000).
 
-"Rastgele Nokta Yerleştir" butonuna tıklayın.
+2. "Rastgele Nokta Yerleştir" butonuna tıklayın.
 
-Noktalar anında ekrana dağınık şekilde yerleştirilecek ve sağdaki log ekranında şu metrikler canlı olarak hesaplanacaktır:
+3. Noktalar anında ekrana dağınık şekilde yerleştirilecek ve sağdaki log ekranında şu metrikler canlı olarak hesaplanacaktır:
 
-Tek Thread (Sequential) Süresi: İşlemin tek çekirdekteki çalışma hızı.
+  - *Tek Thread (Sequential) Süresi:* İşlemin tek çekirdekteki çalışma hızı.
 
-Çoklu Thread (Parallel) Süresi: İşlemin işlemcinizin tüm çekirdeklerini kullanarak çalışma hızı.
+  - *Çoklu Thread (Parallel) Süresi:* İşlemin işlemcinizin tüm çekirdeklerini kullanarak çalışma hızı.
 
-Hızlanma Oranı (Speedup): Paralelleştirme sayesinde elde edilen kat bazında hız artışı ($T_{sequential} / T_{parallel}$).
+  - *Hızlanma Oranı (Speedup):* Paralelleştirme sayesinde elde edilen kat bazında hız artışı ($T_{sequential} / T_{parallel}$).
 
 ---
 
