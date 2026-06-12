@@ -1,62 +1,66 @@
-Threaded Convexity Analysis & Performance Benchmark
+# Threaded Convexity Analysis & Performance Benchmark
 
-Bu proje, iki boyutlu Kartezyen koordinat sistemindeki noktaların oluşturduğu poligonun Convex (Dış Bükey) mi yoksa Concave (İç Bükey) mi olduğunu çoklu iş parçacığı (multithreading) kullanarak analiz eden akademik bir Java uygulamasıdır.
+Bu proje, iki boyutlu Kartezyen koordinat sistemindeki noktaların oluşturduğu poligonun **Convex (Dış Bükey)** mi yoksa **Concave (İç Bükey)** mi olduğunu çoklu iş parçacığı (multithreading) kullanarak analiz eden akademik bir Java uygulamasıdır.
 
-Proje, yazılım mühendisliği prensiplerine uygun olarak Clean Architecture (Temiz Mimari) katman yapısıyla ve JavaFX grafik arayüzü kütüphanesiyle geliştirilmiştir.
+Proje, yazılım mühendisliği prensiplerine uygun olarak **Clean Architecture (Temiz Mimari)** katman yapısıyla ve **JavaFX** grafik arayüzü kütüphanesiyle geliştirilmiştir.
 
-🚀 Özellikler
+---
 
-Clean Architecture: İş mantığı (Domain), thread yönetimi (Application) ve kullanıcı arayüzü (Infrastructure) katmanları tamamen birbirinden izole edilmiştir.
+## 🚀 Özellikler
 
-Canlı Analiz & Kalıcı Log Paneli: Sol panelde yapılan her işlem (manuel nokta ekleme, geri alma, temizleme veya random üretme) sağ taraftaki log ekranına tarih damgasıyla, silinmeyecek bir geçmiş olarak eklenir.
+- **Clean Architecture**: İş mantığı (Domain), thread yönetimi (Application) ve kullanıcı arayüzü (Infrastructure) katmanları tamamen birbirinden izole edilmiştir.
+- **Canlı Analiz & Kalıcı Log Paneli**: Sol panelde yapılan her işlem (manuel nokta ekleme, geri alma, temizleme veya random üretme) sağ taraftaki log ekranına tarih damgasıyla, silinmeyecek bir geçmiş olarak eklenir.
+- **İki Farklı Analiz Modu**:
+  - *Görsel Çizim Modu*: Kullanıcı arayüzünde hızlı tepki verebilmek için ilk bükülmede erken çıkış (early exit) yapar.
+  - *Süre/Hızlanma Ölçüm Modu*: Doğru performans kıyaslaması için erken çıkış yapmadan tüm noktaları taramaya zorlanır (forceFullScan).
+- **Esnek Kullanıcı Deneyimi**: Son eklenen noktayı geri alma (Undo), ekranı temizleme (Clear) ve dinamik random koordinat üretme fonksiyonları mevcuttur.
 
-İki Farklı Analiz Modu:
+---
 
-Görsel Çizim Modu: Kullanıcı arayüzünde hızlı tepki verebilmek için ilk bükülmede erken çıkış (early exit) yapar.
-
-Süre/Hızlanma Ölçüm Modu: Doğru performans kıyaslaması için erken çıkış yapmadan tüm noktaları taramaya zorlanır (forceFullScan).
-
-Esnek Kullanıcı Deneyimi: Son eklenen noktayı geri alma (Undo), ekranı temizleme (Clear) ve dinamik random koordinat üretme fonksiyonları mevcuttur.
-
-🛠️ Sistem Gereksinimleri
+## 🛠️ Sistem Gereksinimleri
 
 Projeyi yerel bilgisayarınızda derlemek ve çalıştırmak için aşağıdaki araçların kurulu olması gerekmektedir:
 
-Java Development Kit (JDK) 21 veya üzeri (Örn: Eclipse Temurin, Oracle JDK)
+- **Java Development Kit (JDK) 21** veya üzeri (Örn: Eclipse Temurin, Oracle JDK)
+- **Apache Maven 3.8** veya üzeri
+- **JavaFX** destekleyen bir IDE (Önerilen: VS Code, IntelliJ IDEA veya Eclipse)
 
-Apache Maven 3.8 veya üzeri
+---
 
-JavaFX destekleyen bir IDE (Önerilen: VS Code, IntelliJ IDEA veya Eclipse)
+## 📦 Kurulum ve Yerel Çalıştırma
 
-📦 Kurulum ve Yerel Çalıştırma
-
-1. Projeyi Klonlayın
+### 1. Projeyi Klonlayın
 
 Öncelikle terminali açın ve projeyi bilgisayarınıza indirin:
 
-git clone [https://github.com/KULLANICI_ADIN/threaded-convexity-analysis.git](https://github.com/KULLANICI_ADIN/threaded-convexity-analysis.git)
+```bash
+git clone https://github.com/KULLANICI_ADIN/threaded-convexity-analysis.git
 cd threaded-convexity-analysis
+```
 
-
-2. Projeyi Derleyin
+### 2. Projeyi Derleyin
 
 Gerekli JavaFX bağımlılıklarını indirmek ve projeyi derlemek için Maven komutunu çalıştırın:
 
+```bash
 mvn clean install
+```
 
-
-3. Uygulamayı Başlatın
+### 3. Uygulamayı Başlatın
 
 Aşağıdaki Maven eklenti komutunu kullanarak arayüz ekranını ayağa kaldırın:
 
+```bash
 mvn javafx:run
+```
 
+---
 
-🎮 Uygulama Nasıl Kullanılır?
+## 🎮 Uygulama Nasıl Kullanılır?
 
 Uygulama açıldığında karşınıza iki bölmeli modern bir arayüz gelecektir:
 
-A. Manuel Çizim Modu
+### A. Manuel Çizim Modu
 
 Sol taraftaki beyaz alan (Canvas) üzerine fareyle tıklayarak noktalarınızı yerleştirin.
 
@@ -70,7 +74,7 @@ Poligon Concave (İç Bükey) ise çizgiler KIRMIZI olur.
 
 Yanlış koyduğunuz noktaları "Son Noktayı Geri Al" butonuyla silebilir, "Ekranı Temizle" butonuyla çiziminizi tamamen sıfırlayabilirsiniz.
 
-B. Rastgele Nokta ile Performans Testi
+### B. Rastgele Nokta ile Performans Testi
 
 Sağ üst köşedeki kutucuğa üretilmesini istediğiniz nokta sayısını yazın (Örn: 1,000,000).
 
@@ -84,8 +88,9 @@ Tek Thread (Sequential) Süresi: İşlemin tek çekirdekteki çalışma hızı.
 
 Hızlanma Oranı (Speedup): Paralelleştirme sayesinde elde edilen kat bazında hız artışı ($T_{sequential} / T_{parallel}$).
 
-📐 Proje Mimari Detayları
+## 📐 Proje Mimari Detayları
 
+```bash
 src/main/java/com/project/convexity/
 ├── domain/               # İş Mantığı (Framework bağımlılığı içermez)
 │   ├── model/            # Point (Koordinat veri yapısı)
@@ -97,8 +102,8 @@ src/main/java/com/project/convexity/
 │
 └── infrastructure/       # Dış Dünya (Görselleştirme ve I/O)
     └── ui/               # VisualizerApp (JavaFX Kullanıcı Arayüzü)
+```
 
-
-📄 Lisans
+## 📄 Lisans
 
 Bu proje akademik değerlendirme ve eğitim amacıyla geliştirilmiştir. Ticari amaçla kullanılamaz.
