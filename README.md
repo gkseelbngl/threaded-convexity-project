@@ -88,6 +88,8 @@ Tek Thread (Sequential) Süresi: İşlemin tek çekirdekteki çalışma hızı.
 
 Hızlanma Oranı (Speedup): Paralelleştirme sayesinde elde edilen kat bazında hız artışı ($T_{sequential} / T_{parallel}$).
 
+---
+
 ## 📐 Proje Mimari Detayları
 
 ```bash
@@ -103,6 +105,8 @@ src/main/java/com/project/convexity/
 └── infrastructure/       # Dış Dünya (Görselleştirme ve I/O)
     └── ui/               # VisualizerApp (JavaFX Kullanıcı Arayüzü)
 ```
+
+---
 
 ## 📄 Lisans
 
