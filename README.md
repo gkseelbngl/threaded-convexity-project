@@ -34,7 +34,7 @@ Projeyi yerel bilgisayarınızda derlemek ve çalıştırmak için aşağıdaki 
 Öncelikle terminali açın ve projeyi bilgisayarınıza indirin:
 
 ```bash
-git clone https://github.com/KULLANICI_ADIN/threaded-convexity-analysis.git
+git clone https://github.com/gkseelbngl/threaded-convexity-analysis.git
 cd threaded-convexity-analysis
 ```
 
@@ -68,9 +68,9 @@ Uygulama açıldığında karşınıza iki bölmeli modern bir arayüz gelecekti
 
 3. Eğer nokta sayısı 3'ten az ise sistem uyarı verecektir. Nokta sayısı yeterli ise poligon otomatik olarak ilk noktaya bağlanıp kapanacaktır:
 
-  - *Poligon Convex (Dış Bükey)* ise çizgiler **YEŞİL** olur.
+    - *Poligon Convex (Dış Bükey)* ise çizgiler **YEŞİL** olur.
 
-  - *Poligon Concave (İç Bükey)* ise çizgiler **KIRMIZI** olur.
+    - *Poligon Concave (İç Bükey)* ise çizgiler **KIRMIZI** olur.
 
 4. Yanlış koyduğunuz noktaları "**Son Noktayı Geri Al**" butonuyla silebilir, "**Ekranı Temizle**" butonuyla çiziminizi tamamen sıfırlayabilirsiniz.
 
@@ -82,11 +82,11 @@ Uygulama açıldığında karşınıza iki bölmeli modern bir arayüz gelecekti
 
 3. Noktalar anında ekrana dağınık şekilde yerleştirilecek ve sağdaki log ekranında şu metrikler canlı olarak hesaplanacaktır:
 
-  - *Tek Thread (Sequential) Süresi:* İşlemin tek çekirdekteki çalışma hızı.
+    - *Tek Thread (Sequential) Süresi:* İşlemin tek çekirdekteki çalışma hızı.
 
-  - *Çoklu Thread (Parallel) Süresi:* İşlemin işlemcinizin tüm çekirdeklerini kullanarak çalışma hızı.
+    - *Çoklu Thread (Parallel) Süresi:* İşlemin işlemcinizin tüm çekirdeklerini kullanarak çalışma hızı.
 
-  - *Hızlanma Oranı (Speedup):* Paralelleştirme sayesinde elde edilen kat bazında hız artışı ($T_{sequential} / T_{parallel}$).
+    - *Hızlanma Oranı (Speedup):* Paralelleştirme sayesinde elde edilen kat bazında hız artışı ($T_{sequential} / T_{parallel}$).
 
 ---
 
