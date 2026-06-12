@@ -1,0 +1,31 @@
+macOS sistem dosyaları
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Maven derleme çıktıları
+
+target/
+*.class
+*.war
+*.ear
+*.jar
+
+VS Code yerel ayarları ve çalışma alanı verileri
+
+.vscode/
+.factorypath
+.project
+.classpath
+.settings/
+
+IntelliJ IDEA (Eğer kullanılırsa)
+
+.idea/
+*.iml
+*.iws
+
+Log dosyaları
+
+*.log
